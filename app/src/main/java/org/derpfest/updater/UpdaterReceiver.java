@@ -17,6 +17,7 @@ import android.os.SystemProperties;
 import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 
+import org.derpfest.updater.controller.UpdaterController;
 import org.derpfest.updater.misc.BuildInfoUtils;
 import org.derpfest.updater.misc.Constants;
 import org.derpfest.updater.misc.StringGenerator;
@@ -86,6 +87,8 @@ public class UpdaterReceiver extends BroadcastReceiver {
                 pref.edit().putBoolean(Constants.PREF_INSTALL_NOTIFIED, true).apply();
                 showUpdateFailedNotification(context);
             }
+
+            UpdaterController.getInstance(context).checkForPendingDeletions();
         }
     }
 }

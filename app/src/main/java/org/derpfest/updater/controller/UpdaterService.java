@@ -31,9 +31,11 @@ import org.derpfest.updater.misc.BuildInfoUtils;
 import org.derpfest.updater.misc.Constants;
 import org.derpfest.updater.misc.StringGenerator;
 import org.derpfest.updater.misc.Utils;
+import org.derpfest.updater.model.Update;
 import org.derpfest.updater.model.UpdateInfo;
 import org.derpfest.updater.model.UpdateStatus;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.NumberFormat;
@@ -112,8 +114,10 @@ public class UpdaterService extends Service {
                     setNotificationTitle(update);
                     handleInstallProgress(update);
                 } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
+                    final boolean isLocalUpdate = Update.LOCAL_ID.equals(downloadId);
                     Bundle extras = mNotificationBuilder.getExtras();
-                    if (downloadId.equals(extras.getString(UpdaterController.EXTRA_DOWNLOAD_ID))) {
+                    if (extras != null && !isLocalUpdate && downloadId.equals(
+                            extras.getString(UpdaterController.EXTRA_DOWNLOAD_ID))) {
                         mNotificationBuilder.setExtras(null);
                         UpdateInfo update = mUpdaterController.getUpdate(downloadId);
                         if (update != null && update.getStatus() != UpdateStatus.INSTALLED) {
@@ -407,10 +411,13 @@ public class UpdaterService extends Service {
                 SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
                 boolean deleteUpdate = Utils.isDeleteUpdatesForceEnabled(this) ? true
                         : pref.getBoolean(Constants.PREF_AUTO_DELETE_UPDATES, true);
-                if (deleteUpdate) {
-                    mUpdaterController.deleteUpdate(update.getDownloadId());
+                boolean isLocal = Update.LOCAL_ID.equals(update.getDownloadId());
+                // Mark updates for deletion after reboot
+                if (deleteUpdate || isLocal) {
+                    mUpdaterController.markUpdateForDeletionAfterReboot(update.getDownloadId());
                 }
 
+                sendBroadcast(new Intent(UpdaterController.ACTION_UPDATE_STATUS).putExtra(UpdaterController.EXTRA_DOWNLOAD_ID, update.getDownloadId()));
                 tryStopSelf();
                 break;
             }
