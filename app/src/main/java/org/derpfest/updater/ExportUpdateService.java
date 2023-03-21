@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater;
+package org.derpfest.updater;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 
-import org.lineageos.updater.misc.FileUtils;
+import org.derpfest.updater.misc.FileUtils;
 
 import java.io.File;
 import java.io.IOException;

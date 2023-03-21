@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater.download;
+package org.derpfest.updater.download;
 
 import android.os.SystemClock;
 import android.util.Log;

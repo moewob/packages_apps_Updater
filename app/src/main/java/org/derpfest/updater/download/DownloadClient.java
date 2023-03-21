@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater.download;
+package org.derpfest.updater.download;
 
 import java.io.File;
 import java.io.IOException;

@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater;
+package org.derpfest.updater;
 
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
@@ -19,9 +19,9 @@ import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 
 import org.json.JSONException;
-import org.lineageos.updater.download.DownloadClient;
-import org.lineageos.updater.misc.Constants;
-import org.lineageos.updater.misc.Utils;
+import org.derpfest.updater.download.DownloadClient;
+import org.derpfest.updater.misc.Constants;
+import org.derpfest.updater.misc.Utils;
 
 import java.io.File;
 import java.io.IOException;

@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater;
+package org.derpfest.updater;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -42,14 +42,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import org.lineageos.updater.controller.UpdaterController;
-import org.lineageos.updater.controller.UpdaterService;
-import org.lineageos.updater.misc.BuildInfoUtils;
-import org.lineageos.updater.misc.Constants;
-import org.lineageos.updater.misc.StringGenerator;
-import org.lineageos.updater.misc.Utils;
-import org.lineageos.updater.model.UpdateInfo;
-import org.lineageos.updater.model.UpdateStatus;
+import org.derpfest.updater.controller.UpdaterController;
+import org.derpfest.updater.controller.UpdaterService;
+import org.derpfest.updater.misc.BuildInfoUtils;
+import org.derpfest.updater.misc.Constants;
+import org.derpfest.updater.misc.StringGenerator;
+import org.derpfest.updater.misc.Utils;
+import org.derpfest.updater.model.UpdateInfo;
+import org.derpfest.updater.model.UpdateStatus;
 
 import java.io.IOException;
 import java.text.DateFormat;

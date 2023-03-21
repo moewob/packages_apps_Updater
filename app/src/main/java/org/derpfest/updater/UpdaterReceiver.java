@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater;
+package org.derpfest.updater;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -17,16 +17,16 @@ import android.os.SystemProperties;
 import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.updater.misc.BuildInfoUtils;
-import org.lineageos.updater.misc.Constants;
-import org.lineageos.updater.misc.StringGenerator;
+import org.derpfest.updater.misc.BuildInfoUtils;
+import org.derpfest.updater.misc.Constants;
+import org.derpfest.updater.misc.StringGenerator;
 
 import java.text.DateFormat;
 
 public class UpdaterReceiver extends BroadcastReceiver {
 
     public static final String ACTION_INSTALL_REBOOT =
-            "org.lineageos.updater.action.INSTALL_REBOOT";
+            "org.derpfest.updater.action.INSTALL_REBOOT";
 
     private static final String INSTALL_ERROR_NOTIFICATION_CHANNEL =
             "install_error_notification_channel";

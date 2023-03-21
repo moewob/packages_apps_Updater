@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater;
+package org.derpfest.updater;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -54,14 +54,14 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
-import org.lineageos.updater.controller.UpdaterController;
-import org.lineageos.updater.controller.UpdaterService;
-import org.lineageos.updater.download.DownloadClient;
-import org.lineageos.updater.misc.BuildInfoUtils;
-import org.lineageos.updater.misc.Constants;
-import org.lineageos.updater.misc.StringGenerator;
-import org.lineageos.updater.misc.Utils;
-import org.lineageos.updater.model.UpdateInfo;
+import org.derpfest.updater.controller.UpdaterController;
+import org.derpfest.updater.controller.UpdaterService;
+import org.derpfest.updater.download.DownloadClient;
+import org.derpfest.updater.misc.BuildInfoUtils;
+import org.derpfest.updater.misc.Constants;
+import org.derpfest.updater.misc.StringGenerator;
+import org.derpfest.updater.misc.Utils;
+import org.derpfest.updater.model.UpdateInfo;
 
 import java.io.File;
 import java.io.IOException;

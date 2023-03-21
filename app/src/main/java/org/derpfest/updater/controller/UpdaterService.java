@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater.controller;
+package org.derpfest.updater.controller;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -24,15 +24,15 @@ import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.updater.R;
-import org.lineageos.updater.UpdaterReceiver;
-import org.lineageos.updater.UpdatesActivity;
-import org.lineageos.updater.misc.BuildInfoUtils;
-import org.lineageos.updater.misc.Constants;
-import org.lineageos.updater.misc.StringGenerator;
-import org.lineageos.updater.misc.Utils;
-import org.lineageos.updater.model.UpdateInfo;
-import org.lineageos.updater.model.UpdateStatus;
+import org.derpfest.updater.R;
+import org.derpfest.updater.UpdaterReceiver;
+import org.derpfest.updater.UpdatesActivity;
+import org.derpfest.updater.misc.BuildInfoUtils;
+import org.derpfest.updater.misc.Constants;
+import org.derpfest.updater.misc.StringGenerator;
+import org.derpfest.updater.misc.Utils;
+import org.derpfest.updater.model.UpdateInfo;
+import org.derpfest.updater.model.UpdateStatus;
 
 import java.io.IOException;
 import java.text.DateFormat;

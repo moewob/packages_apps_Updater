@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater.controller;
+package org.derpfest.updater.controller;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,11 +12,11 @@ import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.updater.misc.Constants;
-import org.lineageos.updater.misc.FileUtils;
-import org.lineageos.updater.misc.Utils;
-import org.lineageos.updater.model.UpdateInfo;
-import org.lineageos.updater.model.UpdateStatus;
+import org.derpfest.updater.misc.Constants;
+import org.derpfest.updater.misc.FileUtils;
+import org.derpfest.updater.misc.Utils;
+import org.derpfest.updater.model.UpdateInfo;
+import org.derpfest.updater.model.UpdateStatus;
 
 import java.io.File;
 import java.io.IOException;

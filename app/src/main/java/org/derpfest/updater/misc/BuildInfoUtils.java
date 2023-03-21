@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater.misc;
+package org.derpfest.updater.misc;
 
 import android.os.SystemProperties;
 

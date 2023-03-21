@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2017 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater.model;
+package org.derpfest.updater.model;
 
 public enum UpdateStatus {
     UNKNOWN,

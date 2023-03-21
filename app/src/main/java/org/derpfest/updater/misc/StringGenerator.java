@@ -2,12 +2,12 @@
  * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.lineageos.updater.misc;
+package org.derpfest.updater.misc;
 
 import android.content.Context;
 import android.content.res.Resources;
 
-import org.lineageos.updater.R;
+import org.derpfest.updater.R;
 
 import java.text.DateFormat;
 import java.util.Date;
