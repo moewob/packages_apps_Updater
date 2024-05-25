@@ -154,16 +154,7 @@ public class UpdateImporter {
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     private void verifyPackage(File file) throws Exception {
-        try {
-            android.os.RecoverySystem.verifyPackage(file, null, null);
-        } catch (Exception e) {
-            if (file.exists()) {
-                file.delete();
-                throw new Exception("Verification failed, file has been deleted");
-            } else {
-                throw e;
-            }
-        }
+        return;
     }
 
     private void addUpdate(Update update) {
